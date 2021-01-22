@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fylo {
+  height: 100%;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  padding-bottom: 160px;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(./images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.files {
+  position: relative;
+  padding-right: 90px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px 100px 10px 10px;
+  background-color: hsl(228, 56%, 26%);
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logos {
+  margin-right: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: hsl(229, 57%, 11%);
+  cursor: pointer;
+}
+
+.storage {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  align-self: flex-end;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: hsl(228, 56%, 26%);
+}
+
+.storage-info {
+  padding-bottom: 15px;
+  color: hsl(243, 100%, 93%);
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 357px;
+  height: 16px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
+progress.progbar::-webkit-progress-bar {
+  border-radius: 10px;
+}
+
+progress.progbar::-webkit-progress-value {
+  border-radius: 10px;
+  background: linear-gradient(to left, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.storage-usage-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-start {
+  color: hsl(243, 100%, 93%);
+}
+
+.info-end {
+  color: hsl(243, 100%, 93%);
+}
+
+.storage-left {
+  position: absolute;
+  bottom: 80px;
+  left: 270px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-radius: 10px 10px 0px 10px;
+}
+
+.storage-left-number {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: hsl(228, 56%, 26%);
+}
+
+.storage-left-text {
+  font-size: 1em;
+  font-weight: 700;
+  color: hsl(229, 7%, 55%);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .fylo {
+    width: 300px;
+    flex-direction: column;
+  }
+  .files {
+    margin-bottom: 20px;
+  }
+  .file-category {
+    width: 200px;
+    display: block;
+    /* padding-left: 10px; */
+  }
+  .storage {
+    position: relative;
+    width: 300px;
+    height: 120px;
+  }
+  progress {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 260px;
+    height: 19px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+  }
+  .storage-left {
+    position: absolute;
+    top: 90px;
+    left: 80px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px 10px 10px 10px;
+  }
+  span {
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
